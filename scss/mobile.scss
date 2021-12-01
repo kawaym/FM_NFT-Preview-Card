@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$font-stack: Outfit, sans-serif;
+$font-size: 18px;
+$background-body: hsl(217, 54%, 11%);
+$background-card: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$color-value: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$card-width: 300px;
+$card-height: 460px;
+body {
+    background: $background-body;
+    font: 100% $font-stack;
+
+    margin-top: 100px;
+}
+.card{
+    width: $card-width;
+    height: $card-height;
+
+    background: $background-card;
+
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .container-image{
+        width: 100%;
+
+        position: relative;
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+        .overlay-image{
+            width: 100%;
+            height: 260px;
+            border-radius: 20px;
+            position: absolute;
+            z-index: 1;
+
+            opacity: 0;
+            svg{
+                margin: 130px - 24px;
+                opacity: 100%;
+            }
+            &:hover{
+                background-color: $cyan;
+                opacity: 50%;
+            }
+        }
+    }
+    div{
+        width: 100%;
+    }
+}
+.title-card{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    &:hover{
+        color: $cyan;
+    }
+}
+.description-card{
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-value;
+}
+.container-info{
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+    span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+}
+.value-card{
+    color: $cyan;
+    font-weight: 600;
+    text-align: left;
+}
+.lifespan-card{
+    color: $color-value;
+    font-weight: 400;
+    text-align: right;
+
+    &:hover{
+        color: $cyan;
+    }
+}
+.line{
+    height: 2px;
+    background-color: $line;
+}
+.creator-card{
+    display: flex;
+    align-items: center;
+    color: $color-value;
+    img{
+        width: 10%;
+        justify-self: flex-start;
+        margin-right: 15px;
+    }
+    span{
+        margin-left: 0.1em;
+        color: white;
+
+        &:hover{
+            color: $cyan;
+        }
+    }
+}
+.attribution{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+}
